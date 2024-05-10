@@ -1,34 +1,24 @@
 
-on:
-  push:
-    branches:
-      - main
+name: Sync latest changes from ALICIA
 
-name: ⏫ Sync Latest Changes from ALICIA
+on: push
 
 jobs:
   copy-file:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source repository
-        uses: actions/checkout@v3
-        with:
-          repository: pamsacdalan/MLtraining  # source repository
-      
-      - name: List contents of workspace
-        run: ls $GITHUB_WORKSPACE
-        
-      - name: Copy files to destination repository
-        run: |
-          cd $GITHUB_WORKSPACE
-          git clone git@github.com:pamsacdalan/bashGitProject.git
-          cp -r ./README.md ./bashGitProject/
-          cd bashGitProject
-          git config user.name "pamsacdalan"
-          git config user.email "pamela.sacdalan@gmail.com"
-          git add .
-          git commit -m "Copy latest changes from ALICIA"
-          git push origin main 
-       
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Copy contents to destination repository # Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'README.md'
+        destination_repo: 'pamsacdalan/bashGitProject'
+        #destination_folder: 
+        user_email: 'pamela.sacdalan@email.com'
+        user_name: 'pamsacdalan'
+        commit_message: 'AUTO: Syncing latest changes from ALICIA'
+  
