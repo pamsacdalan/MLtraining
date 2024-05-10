@@ -29,3 +29,6 @@ jobs:
           git add .
           git commit -m "Copy latest changes from ALICIA"
           git push origin main 
+       
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
