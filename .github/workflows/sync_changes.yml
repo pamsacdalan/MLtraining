@@ -13,7 +13,7 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v3
         with:
-          repository: pamsacdalan/MLtraining/tree/main  # source repository
+          repository: pamsacdalan/MLtraining  # source repository
       
       - name: List contents of workspace
         run: ls $GITHUB_WORKSPACE
@@ -22,7 +22,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           git clone https://github.com/pamsacdalan/bashGitProject.git
-          cp -r ./MLtraining/ ./bashGitProject/
+          cp -r ./MLtraining/tree/main ./bashGitProject/
           cd bashGitProject
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
