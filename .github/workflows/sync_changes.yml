@@ -18,7 +18,7 @@ jobs:
         source_file: 'README.md'
         destination_repo: 'pamsacdalan/bashGitProject'
         #destination_folder: 
-        user_email: 'pamela.sacdalan@email.com'
+        user_email: 'pamela.sacdalan@gmail.com'
         user_name: 'pamsacdalan'
         commit_message: 'AUTO: Syncing latest changes from ALICIA'
   
