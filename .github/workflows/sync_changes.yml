@@ -16,8 +16,8 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'README.md'
-        destination_repo: 'pamsacdalan/bashGitProject/tree/test'
-        #destination_folder: 
+        destination_repo: 'pamsacdalan/bashGitProject'
+        destination_folder: 'test'
         user_email: 'pamela.sacdalan@gmail.com'
         user_name: 'pamsacdalan'
         commit_message: 'AUTO: Syncing latest changes from ALICIA'
