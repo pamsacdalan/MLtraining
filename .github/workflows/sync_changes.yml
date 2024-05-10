@@ -13,7 +13,7 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v3
         with:
-          repository: pamsacdalan/MLtraining  # source repository
+          repository: pamsacdalan/MLtraining/tree/main  # source repository
       
       - name: List contents of workspace
         run: ls $GITHUB_WORKSPACE
