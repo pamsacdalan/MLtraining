@@ -16,7 +16,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'README.md'
-        destination_repo: 'pamsacdalan/bashGitProject'
+        destination_repo: 'ellesonra/ServiceNow-Chatbot'
         #destination_folder: 
         user_email: 'pamela.sacdalan@gmail.com'
         user_name: 'pamsacdalan'
