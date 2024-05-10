@@ -22,7 +22,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           git clone https://github.com/pamsacdalan/bashGitProject.git
-          cp -r ./MLtraining/* ./bashGitProject/
+          cp -r ./MLtraining/ ./bashGitProject/
           cd bashGitProject
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
