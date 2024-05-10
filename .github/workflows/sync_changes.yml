@@ -17,9 +17,9 @@ jobs:
               env:
                   API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
               with:
-                  source_file: ./MLtraining/main  # Folder or file to copy within your repository
+                  source_file: ./MLtraining/tree/main  # Folder or file to copy within your repository
                   destination_repo: pamsacdalan/bashGitProject  # Target repository
-                  destination_folder: ./main  # Folder where to copy it in the destination repository
+                  destination_folder: ./tree/main  # Folder where to copy it in the destination repository
                   user_email: "pamela.sacdalan@gmail.com"
                   user_name: "pamsacdalan"
                   commit_message: "AUTO: Syncing latest changes from ALICIA" # Change it to ${{ github.event.head_commit.message }} to preserve the original commit message
