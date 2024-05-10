@@ -24,8 +24,8 @@ jobs:
           git clone https://github.com/pamsacdalan/bashGitProject.git
           cp -r ./README.md ./bashGitProject/
           cd bashGitProject
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "pamsacdalan"
+          git config user.email "pamela.sacdalan@gmail.com"
           git add .
           git commit -m "Copy latest changes from ALICIA"
           git push origin main 
